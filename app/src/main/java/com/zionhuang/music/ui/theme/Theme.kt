@@ -14,13 +14,20 @@ import androidx.compose.runtime.saveable.SaverScope
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontFamily
 import androidx.palette.graphics.Palette
 import com.google.material.color.dynamiccolor.DynamicScheme
 import com.google.material.color.hct.Hct
 import com.google.material.color.scheme.SchemeTonalSpot
 import com.google.material.color.score.Score
+import com.zionhuang.music.R
 
 val DefaultThemeColor = Color(0xFF4285F4)
+val outfitFontFamily = FontFamily(
+    Font(R.font.outfit_regular, FontWeight.Normal)
+)
 
 @Composable
 fun InnerTuneTheme(
@@ -43,7 +50,24 @@ fun InnerTuneTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = MaterialTheme.typography,
+        typography = MaterialTheme.typography.copy(
+            // Apply Outfit Regular to all text styles
+            bodyLarge = MaterialTheme.typography.bodyLarge.copy(fontFamily = outfitFontFamily),
+            bodyMedium = MaterialTheme.typography.bodyMedium.copy(fontFamily = outfitFontFamily),
+            bodySmall = MaterialTheme.typography.bodySmall.copy(fontFamily = outfitFontFamily),
+            displayLarge = MaterialTheme.typography.displayLarge.copy(fontFamily = outfitFontFamily),
+            displayMedium = MaterialTheme.typography.displayMedium.copy(fontFamily = outfitFontFamily),
+            displaySmall = MaterialTheme.typography.displaySmall.copy(fontFamily = outfitFontFamily),
+            headlineLarge = MaterialTheme.typography.headlineLarge.copy(fontFamily = outfitFontFamily),
+            headlineMedium = MaterialTheme.typography.headlineMedium.copy(fontFamily = outfitFontFamily),
+            headlineSmall = MaterialTheme.typography.headlineSmall.copy(fontFamily = outfitFontFamily),
+            labelLarge = MaterialTheme.typography.labelLarge.copy(fontFamily = outfitFontFamily),
+            labelMedium = MaterialTheme.typography.labelMedium.copy(fontFamily = outfitFontFamily),
+            labelSmall = MaterialTheme.typography.labelSmall.copy(fontFamily = outfitFontFamily),
+            titleLarge = MaterialTheme.typography.titleLarge.copy(fontFamily = outfitFontFamily),
+            titleMedium = MaterialTheme.typography.titleMedium.copy(fontFamily = outfitFontFamily),
+            titleSmall = MaterialTheme.typography.titleSmall.copy(fontFamily = outfitFontFamily),
+        ),
         content = content
     )
 }

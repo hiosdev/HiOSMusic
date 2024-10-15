@@ -24,7 +24,7 @@ import com.google.material.color.scheme.SchemeTonalSpot
 import com.google.material.color.score.Score
 import com.zionhuang.music.R
 
-val DefaultThemeColor = Color(0xFF4285F4)
+val DefaultThemeColor = Color(0xFF0061a6)
 val outfitFontFamily = FontFamily(
     Font(R.font.outfit_regular, FontWeight.Normal)
 )

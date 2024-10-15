@@ -78,7 +78,7 @@ fun SettingsScreen(
             icon = { Icon(painterResource(R.drawable.restore), null) },
             onClick = { navController.navigate("settings/backup_restore") }
         )
-        PreferenceEntry(
+        /*PreferenceEntry(
             title = { Text(stringResource(R.string.about)) },
             icon = { Icon(painterResource(R.drawable.info), null) },
             onClick = { navController.navigate("settings/about") }
@@ -99,10 +99,10 @@ fun SettingsScreen(
                     }
                 },
                 onClick = {
-                    uriHandler.openUri("https://github.com/z-huang/InnerTune/releases/latest")
+                    uriHandler.openUri("https://github.com/hiosdev/hiosmusic/releases/latest")
                 }
             )
-        }
+        }*/
     }
 
     TopAppBar(

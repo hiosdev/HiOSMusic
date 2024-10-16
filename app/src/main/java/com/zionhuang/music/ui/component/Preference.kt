@@ -36,6 +36,7 @@ fun PreferenceEntry(
     icon: (@Composable () -> Unit)? = null,
     trailingContent: (@Composable () -> Unit)? = null,
     onClick: (() -> Unit)? = null,
+    websiteUrl: String? = null,
     isEnabled: Boolean = true,
 ) {
     Row(

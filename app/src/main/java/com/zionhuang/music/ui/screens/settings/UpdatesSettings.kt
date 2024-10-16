@@ -64,11 +64,9 @@ fun UpdatesSettings(
 
         PreferenceEntry(
             title = { Text(stringResource(R.string.updates_title)) },
-            icon = { Icon(painterResource(R.drawable.backup), null) },
-            onClick = {
-                val formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss")
-                backupLauncher.launch("${context.getString(R.string.app_name)}_${LocalDateTime.now().format(formatter)}.backup")
-            }
+            description = R.string.updates_summary.toString(),
+            icon = { Icon(painterResource(R.drawable.system_update), null) },
+            websiteUrl = R.string.direct_download_url.toString()
         )
         PreferenceEntry(
             title = { Text(stringResource(R.string.restore)) },

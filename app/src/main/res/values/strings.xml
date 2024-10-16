@@ -351,4 +351,31 @@
     <string name="new_version_available">New version available</string>
     <string name="translation_models">Translation Models</string>
     <string name="clear_translation_models">Clear translation models</string>
+
+    <!-- URLs -->
+    <string name="autoupdate_url">https://sites.google.com/view/hios-by-thc/download/autoupdate</string>
+    <string name="whatsnew_url" translatable="false">https://sites.google.com/view/hios-by-thc/download-hiosmusic</string>
+    <string name="notifications_url" translatable="false">https://whatsapp.com/channel/0029Va8U5lXISTkDAhk4bj3J</string>
+    <string name="updates_url" translatable="false">https://sites.google.com/view/hios-by-thc/download-hiosmusic#h.ogr0r3hzljpf</string>
+    <string name="hiosweather_url" translatable="false">https://sites.google.com/view/hios-by-thc/hiosweather#h.rynyo42t0yud</string>
+    <string name="hiosdesktop_url">https://sites.google.com/view/hios-by-thc/hiosdesktop</string>
+    <string name="hienterprises_url" translatable="false">https://sites.google.com/view/thehighlandcafe</string>
+    <string name="support_url" translatable="false">https://sites.google.com/view/thehighlandcafe/customer-support</string>
+
+    <string name="facebook_url">https://www.facebook.com/profile.php?id=100095224335357</string>
+    <string name="facebook_nuggetdev_url">https://www.facebook.com/profile.php?id=61558122144435</string>
+
+    <string name="instagram_url">https://www.instagram.com/thehighlandcafe/</string>
+    <string name="instagram_nuggetdev_url">https://www.instagram.com/nuggetdev/</string>
+
+    <string name="threads_url">https://www.threads.net/@thehighlandcafe</string>
+    <string name="thehighlandcafe_url">https://sites.google.com/view/hicafe</string>
+    <string name="nuggetdev_url">https://sites.google.com/view/nuggetdev</string>
+    <string name="hios_url">https://sites.google.com/view/hios-by-thc</string>
+    <string name="hiossocial_url">https://sites.google.com/view/hios-by-thc/hisocial</string>
+    <string name="privacypolicy_url">https://sites.google.com/view/hios-by-thc/privacy-policy</string>
+    <string name="github_release_url">https://github.com/hiosdev/hiosmusic/releases/latest</string>
+    <string name="github_prerelease_url">https://github.com/hiosdev/hiosmusic/releases</string>
+    <string name="direct_download_url">https://github.com/hiosdev/hiosmusic/releases/latest/download/hiosmusic.apk</string>
+    <string name="hirewards_url">https://sites.google.com/view/hirewards#h.j6t1hqgf8fxc</string>
 </resources>

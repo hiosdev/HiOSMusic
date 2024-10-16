@@ -15,6 +15,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarScrollBehavior
+import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -64,21 +65,49 @@ fun UpdatesSettings(
 
         PreferenceEntry(
             title = { Text(stringResource(R.string.updates_title)) },
-            description = R.string.updates_summary.toString(),
+            subtitle = { Text(stringResource(R.string.updates_summary)) },
             icon = { Icon(painterResource(R.drawable.system_update), null) },
-            websiteUrl = R.string.direct_download_url.toString()
+            websiteUrl = stringResource(id = R.string.direct_download_url),
         )
+
+        Divider()
+
         PreferenceEntry(
-            title = { Text(stringResource(R.string.restore)) },
-            icon = { Icon(painterResource(R.drawable.restore), null) },
-            onClick = {
-                restoreLauncher.launch(arrayOf("application/octet-stream"))
-            }
+            title = { Text(stringResource(R.string.updates_prerelease_title)) },
+            subtitle = { Text(stringResource(R.string.updates_prerelease_summary)) },
+            icon = { Icon(painterResource(R.drawable.ic_prerelease), null)},
+            websiteUrl = stringResource(id = R.string.github_prerelease_url),
+        )
+
+        Divider()
+
+        PreferenceEntry(
+            title = { Text(stringResource(R.string.autoupdate_title)) },
+            subtitle = { Text(stringResource(R.string.autoupdate_summary)) },
+            icon = { Icon(painterResource(R.drawable.ic_autoupdate), null) },
+            websiteUrl = stringResource(id = R.string.autoupdate_url),
+        )
+
+        PreferenceGroupTitle(
+            title = stringResource(R.string.notifications_category)
+        )
+
+        PreferenceEntry(
+            title = { Text(stringResource(R.string.notifications_title)) },
+            subtitle = { Text(stringResource(R.string.notifications_summary)) },
+            icon = { Icon(painterResource(R.drawable.ic_notifications), null) },
+            websiteUrl = stringResource(id = R.string.notifications_url),
+        )
+
+        PreferenceEntry(
+            title = { Text(stringResource(R.string.whatsnew_title)) },
+            icon = { Icon(painterResource(R.drawable.ic_whatsnew), null) },
+            websiteUrl = stringResource(id = R.string.whatsnew_url),
         )
     }
 
     TopAppBar(
-        title = { Text(stringResource(R.string.backup_restore)) },
+        title = { Text(stringResource(R.string.updates)) },
         navigationIcon = {
             IconButton(
                 onClick = navController::navigateUp,

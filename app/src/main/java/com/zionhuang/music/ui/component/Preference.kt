@@ -7,15 +7,18 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -23,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
@@ -32,13 +36,16 @@ fun PreferenceEntry(
     modifier: Modifier = Modifier,
     title: @Composable () -> Unit,
     description: String? = null,
+    subtitle: @Composable (() -> Unit)? = null,
     content: (@Composable () -> Unit)? = null,
     icon: (@Composable () -> Unit)? = null,
     trailingContent: (@Composable () -> Unit)? = null,
     onClick: (() -> Unit)? = null,
-    websiteUrl: String? = null,
     isEnabled: Boolean = true,
+    websiteUrl: String? = null,
 ) {
+    val uriHandler = LocalUriHandler.current
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
@@ -49,6 +56,13 @@ fun PreferenceEntry(
             )
             .alpha(if (isEnabled) 1f else 0.5f)
             .padding(horizontal = 16.dp, vertical = 16.dp)
+            .clickable {
+                if (onClick != null) {
+                    onClick()
+                } else if (websiteUrl != null) {
+                    uriHandler.openUri(websiteUrl)
+                }
+            }
     ) {
         if (icon != null) {
             Box(
@@ -74,6 +88,15 @@ fun PreferenceEntry(
                     style = MaterialTheme.typography.titleSmall,
                     color = MaterialTheme.colorScheme.secondary
                 )
+            }
+
+            if (subtitle != null) {
+                Spacer(modifier = Modifier.height(2.dp))
+                CompositionLocalProvider(LocalContentColor provides LocalContentColor.current.copy(alpha = 0.6f)) {
+                    ProvideTextStyle(value = MaterialTheme.typography.bodySmall) {
+                        subtitle()
+                    }
+                }
             }
 
             content?.invoke()

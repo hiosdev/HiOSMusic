@@ -201,7 +201,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "UnusedBoxWithConstraintsScope")
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -639,7 +639,7 @@ class MainActivity : ComponentActivity() {
                                             BadgedBox(
                                                 badge = {
                                                     if (latestVersionName != BuildConfig.VERSION_NAME) {
-                                                        Badge()
+                                                        //Badge()
                                                     }
                                                 }
                                             ) {

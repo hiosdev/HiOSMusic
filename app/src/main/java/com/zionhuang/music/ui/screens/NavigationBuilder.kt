@@ -23,6 +23,7 @@ import com.zionhuang.music.ui.screens.playlist.LocalPlaylistScreen
 import com.zionhuang.music.ui.screens.playlist.OnlinePlaylistScreen
 import com.zionhuang.music.ui.screens.search.OnlineSearchResult
 import com.zionhuang.music.ui.screens.settings.AboutScreen
+import com.zionhuang.music.ui.screens.settings.UpdatesSettings
 import com.zionhuang.music.ui.screens.settings.AppearanceSettings
 import com.zionhuang.music.ui.screens.settings.BackupAndRestore
 import com.zionhuang.music.ui.screens.settings.ContentSettings
@@ -189,6 +190,9 @@ fun NavGraphBuilder.navigationBuilder(
     }
     composable("settings") {
         SettingsScreen(navController, scrollBehavior, latestVersionName)
+    }
+    composable("settings/updates") {
+        UpdatesSettings(navController, scrollBehavior)
     }
     composable("settings/appearance") {
         AppearanceSettings(navController, scrollBehavior)

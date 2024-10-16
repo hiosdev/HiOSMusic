@@ -75,7 +75,7 @@ fun AboutScreen(
             verticalAlignment = Alignment.Top,
         ) {
             Text(
-                text = "InnerTune",
+                text = "HiOSMusic",
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
@@ -131,7 +131,7 @@ fun AboutScreen(
         Spacer(Modifier.height(4.dp))
 
         Text(
-            text = "by Zion Huang",
+            text = "from HiDev by The Highland Cafe™",
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.secondary
         )
@@ -140,7 +140,7 @@ fun AboutScreen(
 
         Row {
             IconButton(
-                onClick = { uriHandler.openUri("https://github.com/z-huang/InnerTune") }
+                onClick = { uriHandler.openUri("https://github.com/hiosdev/hiosmusic") }
             ) {
                 Icon(
                     painter = painterResource(R.drawable.github),
@@ -149,22 +149,22 @@ fun AboutScreen(
             }
 
             IconButton(
-                onClick = { uriHandler.openUri("https://liberapay.com/zionhuang") }
+                onClick = { uriHandler.openUri("https://sites.google.com/view/hios-by-thc") }
             ) {
                 Icon(
-                    painter = painterResource(R.drawable.liberapay),
+                    painter = painterResource(R.drawable.language),
                     contentDescription = null
                 )
             }
 
-            IconButton(
+            /*IconButton(
                 onClick = { uriHandler.openUri("https://www.buymeacoffee.com/zionhuang") }
             ) {
                 Icon(
                     painter = painterResource(R.drawable.buymeacoffee),
                     contentDescription = null
                 )
-            }
+            }*/
         }
 
     }

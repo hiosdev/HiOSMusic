@@ -43,6 +43,11 @@ fun SettingsScreen(
     ) {
         Spacer(Modifier.windowInsetsPadding(LocalPlayerAwareWindowInsets.current.only(WindowInsetsSides.Top)))
 
+        PreferenceEntry (
+            title = { Text(stringResource(R.string.updates)) },
+            icon = { Icon(painterResource(R.drawable.system_update), null) },
+            onClick = { navController.navigate("settings/updates") }
+        )
         PreferenceEntry(
             title = { Text(stringResource(R.string.appearance)) },
             icon = { Icon(painterResource(R.drawable.palette), null) },
@@ -78,11 +83,11 @@ fun SettingsScreen(
             icon = { Icon(painterResource(R.drawable.restore), null) },
             onClick = { navController.navigate("settings/backup_restore") }
         )
-        /*PreferenceEntry(
+        PreferenceEntry(
             title = { Text(stringResource(R.string.about)) },
             icon = { Icon(painterResource(R.drawable.info), null) },
             onClick = { navController.navigate("settings/about") }
-        )
+        )/*
         if (latestVersionName != BuildConfig.VERSION_NAME) {
             PreferenceEntry(
                 title = {

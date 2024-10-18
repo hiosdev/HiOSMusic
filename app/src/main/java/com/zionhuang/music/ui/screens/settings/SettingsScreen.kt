@@ -73,11 +73,11 @@ fun SettingsScreen(
             icon = { Icon(painterResource(R.drawable.security), null) },
             onClick = { navController.navigate("settings/privacy") }
         )
-        PreferenceEntry(
+        /*PreferenceEntry(
             title = { Text(stringResource(R.string.discord_integration)) },
             icon = { Icon(painterResource(R.drawable.discord), null) },
             onClick = { navController.navigate("settings/discord") }
-        )
+        )*/
         PreferenceEntry(
             title = { Text(stringResource(R.string.backup_restore)) },
             icon = { Icon(painterResource(R.drawable.restore), null) },
@@ -87,8 +87,13 @@ fun SettingsScreen(
             title = { Text(stringResource(R.string.about)) },
             icon = { Icon(painterResource(R.drawable.info), null) },
             onClick = { navController.navigate("settings/about") }
-        )/*
-        if (latestVersionName != BuildConfig.VERSION_NAME) {
+        )
+        PreferenceEntry(
+            title = { Text(stringResource(R.string.apps)) },
+            icon = { Icon(painterResource(R.drawable.ic_moreicon), null) },
+            onClick = { navController.navigate("settings/apps")}
+        )
+        /*if (latestVersionName != BuildConfig.VERSION_NAME) {
             PreferenceEntry(
                 title = {
                     Text(

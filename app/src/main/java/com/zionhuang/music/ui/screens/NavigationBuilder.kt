@@ -25,6 +25,7 @@ import com.zionhuang.music.ui.screens.search.OnlineSearchResult
 import com.zionhuang.music.ui.screens.settings.AboutScreen
 import com.zionhuang.music.ui.screens.settings.UpdatesSettings
 import com.zionhuang.music.ui.screens.settings.AppearanceSettings
+import com.zionhuang.music.ui.screens.settings.AppsSettings
 import com.zionhuang.music.ui.screens.settings.BackupAndRestore
 import com.zionhuang.music.ui.screens.settings.ContentSettings
 import com.zionhuang.music.ui.screens.settings.DiscordLoginScreen
@@ -205,6 +206,9 @@ fun NavGraphBuilder.navigationBuilder(
     }
     composable("settings/storage") {
         StorageSettings(navController, scrollBehavior)
+    }
+    composable("settings/apps") {
+        AppsSettings(navController, scrollBehavior)
     }
     composable("settings/privacy") {
         PrivacySettings(navController, scrollBehavior)

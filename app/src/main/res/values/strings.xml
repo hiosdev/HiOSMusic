@@ -246,6 +246,19 @@
 
     <string name="whatsnew_title">What\'s New?</string>
 
+    <!-- Apps Preferences -->
+    <string name="apps" translatable="false">Apps and Services</string>
+
+    <string name="recommended">Recommended</string>
+
+    <string name="hiosmobile_title">HiOSMobile</string>
+    <string name="hiosmobile_summary">HiOSMobile is the main app by The Highland Cafe™ Enterprises for doing everything related to its brands, ranging from ordering food and looking at menus at HiCafe™️ to booking a room at weB&amp;B!</string>
+
+    <string name="hirewards_title">HiRewards</string>
+    <string name="hirewards_summary">Wanting to earn rewards for visiting your favourite brands by The Highland Cafe™? No probs, as you can now download HiRewards on your smartphone!</string>
+
+    <string name="nuggetdev_apps_title">Other software by HiDev</string>
+    <string name="nuggetdev_apps_summary">Take a look at other great apps, software, and services also by HiDev!</string>
 
     <string name="appearance">Appearance</string>
     <string name="theme">Theme</string>
@@ -358,6 +371,7 @@
     <string name="notifications_url" translatable="false">https://whatsapp.com/channel/0029Va8U5lXISTkDAhk4bj3J</string>
     <string name="updates_url" translatable="false">https://sites.google.com/view/hios-by-thc/download-hiosmusic#h.ogr0r3hzljpf</string>
     <string name="hiosweather_url" translatable="false">https://sites.google.com/view/hios-by-thc/hiosweather#h.rynyo42t0yud</string>
+    <string name="hiosmobile_url" translatable="false">https://sites.google.com/view/hios-by-thc/download</string>
     <string name="hiosdesktop_url">https://sites.google.com/view/hios-by-thc/hiosdesktop</string>
     <string name="hienterprises_url" translatable="false">https://sites.google.com/view/thehighlandcafe</string>
     <string name="support_url" translatable="false">https://sites.google.com/view/thehighlandcafe/customer-support</string>
